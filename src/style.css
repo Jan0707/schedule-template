@@ -1,3 +1,74 @@
-h1, p {
-  font-family: Lato;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.schedule-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.column-timing {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 150px;
+  margin-right: 10px;
+}
+
+.column-timing div {
+  padding: 5px;
+}
+
+.column-timing div:first-child {
+  padding: 5px;
+  flex-basis: 30px;
+  font-size: large;
+}
+
+.column-timing div:not(:first-child) {
+  background-color: lightgrey;
+}
+
+.columns-semesters {
+  flex-grow: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.column-semester {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-semester div:first-child {
+  padding: 5px;
+  padding-bottom: 15px;
+  flex-basis: 30px;
+  font-size: large;
+}
+
+.column-semester .semester-events {
+  background-color: lightgray;
+  flex-grow: 1;
+}
+
+.column-details {
+  margin-left: 10px;
+  flex-basis: 250px;
+  align-content: flex-start;
 }
