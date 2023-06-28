@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './style.css';
 
+import Entry from './Entry';
+
 export default function App() {
   return (
     <div className="container">
@@ -31,15 +33,23 @@ export default function App() {
         </div>
         <div className="schedule-columns columns-semesters">
           <div className="column-semester">
-            <div>1. Semester</div>
+            <div className="title">1. Semester</div>
+            <div className="semester-events">
+              <Entry
+                name="Media Technology Basics"
+                room="F3-0-20"
+                teacher="TS, StS"
+                description="Gruppe 1; bitte Aufteilung und Dokumente in StudIP beachten"
+                duration={6}
+              />
+            </div>
+          </div>
+          <div className="column-semester">
+            <div className="title">2. Semester</div>
             <div className="semester-events"></div>
           </div>
           <div className="column-semester">
-            <div>2. Semester</div>
-            <div className="semester-events"></div>
-          </div>
-          <div className="column-semester">
-            <div>3. Semester</div>
+            <div className="title">3. Semester</div>
             <div className="semester-events"></div>
           </div>
         </div>

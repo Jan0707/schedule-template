@@ -1,7 +1,16 @@
+/**
+META
+*/
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
+
+/**
+SCHEDULE
+*/
 
 .container {
   width: 100%;
@@ -9,17 +18,29 @@ body {
   box-sizing: border-box;
 }
 
+/**
+HEADER
+*/
+
 .schedule-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
+/**
+GRID
+*/
+
 .schedule-container {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
+
+/**
+TIME COLUMN
+*/
 
 .column-timing {
   display: flex;
@@ -29,19 +50,24 @@ body {
   margin-right: 10px;
 }
 
-.column-timing div {
+.column-timing > div {
   padding: 5px;
+  height: 1.2rem;
 }
 
-.column-timing div:first-child {
+.column-timing > div:first-child {
   padding: 5px;
   flex-basis: 30px;
   font-size: large;
 }
 
-.column-timing div:not(:first-child) {
+.column-timing > div:not(:first-child) {
   background-color: lightgrey;
 }
+
+/**
+SEMESTER COLUMN
+*/
 
 .columns-semesters {
   flex-grow: 1;
@@ -50,22 +76,26 @@ body {
 }
 
 .column-semester {
-  flex-grow: 1;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
 }
 
-.column-semester div:first-child {
+.column-semester > .title {
   padding: 5px;
   padding-bottom: 15px;
   flex-basis: 30px;
   font-size: large;
 }
 
-.column-semester .semester-events {
+.column-semester > .semester-events {
   background-color: lightgray;
   flex-grow: 1;
 }
+
+/**
+DETAIL COLUMN
+*/
 
 .column-details {
   margin-left: 10px;
