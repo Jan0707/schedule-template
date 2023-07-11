@@ -50,19 +50,23 @@ TIME COLUMN
   margin-right: 10px;
 }
 
-.column-timing > div {
-  padding: 5px;
-  height: 1.2rem;
-}
-
 .column-timing > div:first-child {
   padding: 5px;
   flex-basis: 30px;
   font-size: large;
 }
 
-.column-timing > div:not(:first-child) {
+.timings {
+  display: grid; /* 1 */
+  grid-template-rows: repeat(13, 30px);
+  row-gap: 10px;
+}
+
+.timings > div {
+  padding: 5px;
+  width: 100%;
   background-color: lightgrey;
+  box-sizing: border-box;
 }
 
 /**
@@ -91,6 +95,16 @@ SEMESTER COLUMN
 .column-semester > .semester-events {
   background-color: lightgray;
   flex-grow: 1;
+}
+
+.semester-events-grid {
+  display: grid;
+  row-gap: 10px;
+  grid-template-rows: repeat(13, 30px);
+}
+
+.semester-events-grid .grid-item {
+  background-color: red;
 }
 
 /**
