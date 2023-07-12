@@ -1,10 +1,38 @@
 import * as React from 'react';
 import './style.css';
 
+import Events from './Events';
 import Entry from './Entry';
 import GridEntry from './GridEntry';
+import SemesterGrid from './SemesterGrid';
+import SemesterColumn from './SemesterColumn';
 
 export default function App() {
+  let events = Events;
+
+  let semesters = [];
+
+  events.forEach((event) => {
+    if (!semesters[event.semester]) {
+      semesters[event.semester] = [];
+    }
+    semesters[event.semester].push(event);
+  });
+
+  console.log(semesters);
+
+  if (!semesters[1]) {
+    semesters[1] = [];
+  }
+
+  if (!semesters[2]) {
+    semesters[2] = [];
+  }
+
+  if (!semesters[3]) {
+    semesters[3] = [];
+  }
+
   return (
     <div className="container">
       <div className="schedule-header">
@@ -37,40 +65,15 @@ export default function App() {
         <div className="schedule-columns columns-semesters">
           <div className="column-semester">
             <div className="title">1. Semester</div>
-            <div className="semester-events">
-              <Entry
-                name="Media Technology Basics"
-                room="F3-0-20"
-                teacher="TS, StS"
-                description="Gruppe 1; bitte Aufteilung und Dokumente in StudIP beachten"
-                duration={6}
-              />
-            </div>
+            <SemesterColumn events={semesters[1]} />
           </div>
           <div className="column-semester">
             <div className="title">2. Semester</div>
-            <div className="semester-events semester-events-grid">
-              <GridEntry
-                name="Media Technology Basics"
-                room="F3-0-20"
-                teacher="TS, StS"
-                description="Gruppe 1; bitte Aufteilung und Dokumente in StudIP beachten"
-                slotStart={1}
-                slotEnd={6}
-              />
-              <GridEntry
-                name="Media Technology Basics"
-                room="F3-0-20"
-                teacher="TS, StS"
-                description="Gruppe 1; bitte Aufteilung und Dokumente in StudIP beachten"
-                slotStart={7}
-                slotEnd={10}
-              />
-            </div>
+            <SemesterColumn events={semesters[2]} />
           </div>
           <div className="column-semester">
             <div className="title">3. Semester</div>
-            <div className="semester-events"></div>
+            <SemesterColumn events={semesters[3]} />
           </div>
         </div>
         <div className="schedule-column column-details">

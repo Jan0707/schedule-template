@@ -10,16 +10,12 @@ export default function GridEntry(entry: {
   slotStart: number;
   slotEnd: number;
 }) {
-  console.log(entry);
-
   return (
     <div
       className="entry"
       style={{
         gridRowStart: entry.slotStart,
         gridRowEnd: entry.slotEnd + 1,
-        //'grid-row-start': ,
-        //'grid-row-end':
       }}
     >
       <div className="title">
