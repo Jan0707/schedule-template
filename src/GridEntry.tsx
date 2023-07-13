@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import './entry.css';
+import "./entry.css";
 
 export default function GridEntry(entry: {
   name: string;
@@ -18,9 +18,7 @@ export default function GridEntry(entry: {
         gridRowEnd: entry.slotEnd + 1,
       }}
     >
-      <div className="title">
-        {entry.name + entry.slotStart + entry.slotEnd}
-      </div>
+      <div className="title">{entry.name}</div>
       <div>{entry.room}</div>
       <div>{entry.teacher}</div>
       <div className="description">{entry.description}</div>

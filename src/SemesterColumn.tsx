@@ -1,9 +1,20 @@
-import * as React from 'react';
+import * as React from "react";
 
-import GridEntry from './GridEntry';
-import SemesterGrid from './SemesterGrid';
+import GridEntry from "./GridEntry";
+import SemesterGrid from "./SemesterGrid";
 
-export default function SemesterColumn(column: { events: [] }) {
+export default function SemesterColumn(column: {
+  events: [
+    {
+      name: string;
+      room: string;
+      teacher: string;
+      description: string;
+      slotStart: number;
+      slotEnd: number;
+    }
+  ];
+}) {
   console.log(column.events);
 
   /*let semesterGrid = new SemesterGrid();
