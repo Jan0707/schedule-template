@@ -119,4 +119,31 @@ DETAIL COLUMN
   flex-shrink: 0;
   flex-grow: 1;
   align-content: flex-start;
+  overflow: hidden;
+  max-height: 560px;
+}
+
+.detail-events {
+  position: relative;
+}
+
+.detail-events .transparency {
+  top: 400px;
+  height: 160px;
+  width: 100%;
+  background: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 80%
+  );
+  display: block;
+  position: absolute;
+}
+
+.detail-events .detail-entry {
+  border-bottom: 3pt solid lightgray;
+}
+
+
+.detail-events .detail-entry:last-child {
+  border: none;
 }

@@ -1,11 +1,9 @@
-import * as React from 'react';
-import './style.css';
+import * as React from "react";
+import "./style.css";
 
-import Events from './Events';
-import Entry from './Entry';
-import GridEntry from './GridEntry';
-import SemesterGrid from './SemesterGrid';
-import SemesterColumn from './SemesterColumn';
+import Events from "./Events";
+import SemesterColumn from "./SemesterColumn";
+import DetailsColumn from "./DetailsColumn";
 
 export default function App() {
   let events = Events;
@@ -77,18 +75,7 @@ export default function App() {
           </div>
         </div>
         <div className="schedule-column column-details">
-          <div className="detail-entry">
-            <p>1. Semester / 08:15 – 13:15</p>
-            <p>
-              Media Technology Basics
-              <br />
-              • F3-0-20
-              <br />
-              • TS, StS
-              <br />
-              Gruppe 1; bitte Aufteilung und Dokumente in StudIP beachten ...
-            </p>
-          </div>
+          <DetailsColumn events={events} />
         </div>
       </div>
     </div>

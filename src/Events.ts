@@ -1,4 +1,17 @@
-export default [
+export interface Event {
+  semester: number,
+  name: string,
+  room: string,
+  teacher: string,
+  description: string,
+  slotStart: number,
+  slotEnd: number,
+}
+
+let events: Event[] = [];
+
+events =
+ [
   {
     semester: 1,
     name: 'Media Technology Basics',
@@ -37,3 +50,5 @@ export default [
     slotEnd: 6,
   },
 ];
+
+export default events;
